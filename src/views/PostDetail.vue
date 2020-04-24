@@ -19,6 +19,7 @@ export default {
   components: {
     PostListItemDetail
   },
+  title: 'My Blog',
   data() {
     return {
       postID: this.$route.params.id,
@@ -30,6 +31,7 @@ export default {
       .get(`https://jsonplaceholder.typicode.com/posts/${this.postID}`)
       .then(response => {
         this.post = response.data;
+        document.title = this.post.title + ' - My Blog';
       })
       .catch(error => {
         console.log(error);
