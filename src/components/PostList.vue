@@ -10,6 +10,9 @@
           </b-col>
         </b-row>
       </div>
+      <div class="text-center" v-else>
+        <b-spinner variant="success" label="Loading"></b-spinner>
+      </div>
     </b-container>
   </div>
 </template>
